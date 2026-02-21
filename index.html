@@ -2,22 +2,16 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tana Swari – Gamelan Bali</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    body { scroll-behavior: smooth; }
-
     .glass {
-      backdrop-filter: blur(16px);
-      background: rgba(255,255,255,0.05);
-    }
-
-    .glow:hover {
-      box-shadow: 0 0 18px rgba(251,191,36,0.35);
+      backdrop-filter: blur(14px);
+      background: rgba(255,255,255,0.06);
     }
 
     .logo-anim {
@@ -26,30 +20,25 @@
 
     @keyframes float {
       0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
+      50% { transform: translateY(-10px); }
     }
   </style>
 </head>
 
-<body class="bg-gradient-to-br from-[#140f0a] via-[#2a1b13] to-[#140f0a] text-white">
+<body class="bg-gradient-to-br from-[#1a120b] via-[#2a1b13] to-[#1a120b] text-white">
 
   <!-- HERO -->
-  <section class="text-center px-6 pt-20 pb-12 relative">
+  <section class="text-center px-6 pt-16 pb-10 relative">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(251,191,36,0.18),transparent_60%)]"></div>
 
     <div class="relative">
-      <div class="glass inline-block p-5 rounded-3xl shadow-2xl border border-white/10">
-        <img src="./logo.png"
-             alt="Logo Tana Swari"
-             class="w-28 mx-auto logo-anim"
-             onerror="this.style.display='none'">
-      </div>
+      <!-- LOGO BESAR -->
+      <img src="./logo.png"
+           alt="Logo Tana Swari"
+           class="w-72 md:w-[420px] mx-auto mb-6 logo-anim drop-shadow-[0_0_60px_rgba(251,191,36,0.55)]">
 
-      <h1 class="text-4xl md:text-5xl font-bold tracking-wide text-amber-400 mt-6">
-        Tana Swari
-      </h1>
-
-      <p class="text-amber-200/70 mt-3 text-sm">
+      <!-- DESKRIPSI -->
+      <p class="text-amber-200/70 text-sm md:text-base">
         Service • Tukar Tambah • Pembuatan Gamelan Baru
       </p>
     </div>
@@ -59,27 +48,31 @@
   <section class="max-w-xl mx-auto px-6 pb-14">
     <div class="space-y-4">
 
+      <!-- WHATSAPP -->
       <a href="https://wa.me/6285790905313"
-         class="glass glow flex items-center justify-center gap-3 rounded-2xl py-3 font-medium shadow-lg border border-white/10 hover:scale-[1.03] transition">
+         class="glass flex items-center justify-center gap-3 rounded-2xl py-3 font-medium shadow-lg border border-white/10 hover:scale-[1.03] transition">
         <i class="fab fa-whatsapp text-green-400 text-lg"></i>
         WhatsApp: 0857-9090-5313
       </a>
 
+      <!-- INSTAGRAM -->
       <a href="https://instagram.com/tanaswari"
-         class="glass glow flex items-center justify-center gap-3 rounded-2xl py-3 font-medium shadow-lg border border-white/10 hover:scale-[1.03] transition">
+         class="glass flex items-center justify-center gap-3 rounded-2xl py-3 font-medium shadow-lg border border-white/10 hover:scale-[1.03] transition">
         <i class="fab fa-instagram text-pink-400 text-lg"></i>
         Instagram: @TanaSwari
       </a>
 
+      <!-- TIKTOK -->
       <a href="https://tiktok.com/@tanaswari"
-         class="glass glow flex items-center justify-center gap-3 rounded-2xl py-3 font-medium shadow-lg border border-white/10 hover:scale-[1.03] transition">
+         class="glass flex items-center justify-center gap-3 rounded-2xl py-3 font-medium shadow-lg border border-white/10 hover:scale-[1.03] transition">
         <i class="fab fa-tiktok text-white text-lg"></i>
         TikTok: @TanaSwari
       </a>
 
+      <!-- MAPS -->
       <a href="https://maps.google.com/?q=Denpasar+Timur+Jepun+Pipil"
          target="_blank"
-         class="glass glow flex items-center justify-center gap-3 rounded-2xl py-3 font-medium shadow-lg border border-white/10 hover:scale-[1.03] transition">
+         class="glass flex items-center justify-center gap-3 rounded-2xl py-3 font-medium shadow-lg border border-white/10 hover:scale-[1.03] transition">
         <i class="fa-solid fa-location-dot text-amber-400"></i>
         Denpasar Timur • Jepun Pipil
       </a>
@@ -88,48 +81,49 @@
   </section>
 
   <!-- PRODUK -->
-  <section class="py-14 px-6 bg-black/30 backdrop-blur-xl border-y border-white/10">
+  <section class="py-14 px-6 bg-black/30 backdrop-blur-xl border-t border-white/10">
     <h2 class="text-2xl font-semibold text-center mb-10 text-amber-400">
       Produk Tana Swari
     </h2>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto text-sm">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-5 max-w-5xl mx-auto text-sm">
 
-      <div class="glass glow rounded-2xl p-4 shadow-lg hover:-translate-y-1 transition">Gender</div>
-      <div class="glass glow rounded-2xl p-4 shadow-lg hover:-translate-y-1 transition">Tawa-tawa</div>
-      <div class="glass glow rounded-2xl p-4 shadow-lg hover:-translate-y-1 transition">Reong</div>
-      <div class="glass glow rounded-2xl p-4 shadow-lg hover:-translate-y-1 transition">Ceng-ceng</div>
-      <div class="glass glow rounded-2xl p-4 shadow-lg hover:-translate-y-1 transition">Gong</div>
-      <div class="glass glow rounded-2xl p-4 shadow-lg hover:-translate-y-1 transition">Kempur</div>
-      <div class="glass glow rounded-2xl p-4 shadow-lg hover:-translate-y-1 transition">Bende</div>
-      <div class="glass glow rounded-2xl p-4 shadow-lg hover:-translate-y-1 transition">Klenang</div>
-      <div class="glass glow rounded-2xl p-4 shadow-lg hover:-translate-y-1 transition">Gangsa</div>
-      <div class="glass glow rounded-2xl p-4 shadow-lg hover:-translate-y-1 transition">Kemong Gantung / Klentong</div>
-      <div class="glass glow rounded-2xl p-4 shadow-lg hover:-translate-y-1 transition">Kajar / Kempli</div>
-      <div class="glass glow rounded-2xl p-4 shadow-lg hover:-translate-y-1 transition">Instrumen Lainnya</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Gender</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Tawa-tawa</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Reong</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Ceng-ceng</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Gong</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Kempur</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Bende</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Klenang</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Gangsa</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Kemong Gantung / Klentong</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Kajar / Kempli</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Instrumen Lainnya</div>
 
     </div>
   </section>
 
-  <!-- CUSTOM ORDER -->
+  <!-- CUSTOM -->
   <section class="py-14 px-6 text-center">
-    <h2 class="text-xl font-semibold mb-3 text-amber-400">
+    <h2 class="text-xl font-semibold mb-4 text-amber-400">
       Pesanan & Kelengkapan Tambahan
     </h2>
 
     <p class="text-amber-100/60 max-w-xl mx-auto mb-8 text-sm leading-relaxed">
-      Melayani pesanan khusus seperti tali ceng-ceng, penggandongan reong,
-      pengandongan kendang, dan berbagai kebutuhan gamelan lainnya.
+      Kami melayani pesanan khusus seperti tali ceng-ceng,
+      penggandongan reong, pengandongan kendang,
+      serta berbagai kebutuhan gamelan lainnya.
     </p>
 
     <a href="https://wa.me/6285790905313"
-       class="inline-block rounded-2xl px-10 py-3 font-semibold shadow-xl hover:scale-105 transition"
+       class="inline-block rounded-2xl px-8 py-3 font-medium shadow-xl hover:scale-105 transition"
        style="background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #2a1b13;">
       Hubungi Sekarang
     </a>
   </section>
 
-  <!-- CTA -->
+  <!-- FOOTER -->
   <section class="text-center text-sm text-amber-200/70 py-8 border-t border-white/10">
     Serius ingin membeli, tukar tambah, atau service gamelan? Hubungi kami sekarang.
   </section>
