@@ -22,54 +22,76 @@
       0%,100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      animation: bounce 1.8s infinite;
+    }
+
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); opacity: 0.6; }
+      50% { transform: translateY(8px); opacity: 1; }
+    }
+
+    /* Fade in on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: 0.8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
 <body class="bg-gradient-to-br from-[#1a120b] via-[#2a1b13] to-[#1a120b] text-white">
 
   <!-- HERO -->
-  <section class="text-center px-6 pt-16 pb-10 relative">
+  <section class="text-center px-6 pt-16 pb-6 relative">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(251,191,36,0.18),transparent_60%)]"></div>
 
     <div class="relative">
-      <!-- LOGO BESAR -->
       <img src="./logo.png"
            alt="Logo Tana Swari"
            class="w-72 md:w-[420px] mx-auto mb-6 logo-anim drop-shadow-[0_0_60px_rgba(251,191,36,0.55)]">
 
-      <!-- DESKRIPSI -->
       <p class="text-amber-200/70 text-sm md:text-base">
         Service • Tukar Tambah • Pembuatan Gamelan Baru
       </p>
     </div>
+
+    <!-- PETUNJUK SCROLL -->
+    <div class="mt-6 text-amber-300/70 text-sm scroll-indicator">
+      <i class="fa-solid fa-angles-down"></i><br>
+      Lihat Produk Kami
+    </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="max-w-xl mx-auto px-6 pb-14">
+  <section class="max-w-xl mx-auto px-6 pb-14 reveal">
     <div class="space-y-4">
 
-      <!-- WHATSAPP -->
       <a href="https://wa.me/6285790905313"
          class="glass flex items-center justify-center gap-3 rounded-2xl py-3 font-medium shadow-lg border border-white/10 hover:scale-[1.03] transition">
         <i class="fab fa-whatsapp text-green-400 text-lg"></i>
         WhatsApp: 0857-9090-5313
       </a>
 
-      <!-- INSTAGRAM -->
       <a href="https://instagram.com/tanaswari"
          class="glass flex items-center justify-center gap-3 rounded-2xl py-3 font-medium shadow-lg border border-white/10 hover:scale-[1.03] transition">
         <i class="fab fa-instagram text-pink-400 text-lg"></i>
         Instagram: @TanaSwari
       </a>
 
-      <!-- TIKTOK -->
       <a href="https://tiktok.com/@tanaswari"
          class="glass flex items-center justify-center gap-3 rounded-2xl py-3 font-medium shadow-lg border border-white/10 hover:scale-[1.03] transition">
         <i class="fab fa-tiktok text-white text-lg"></i>
         TikTok: @TanaSwari
       </a>
 
-      <!-- MAPS -->
       <a href="https://maps.google.com/?q=Denpasar+Timur+Jepun+Pipil"
          target="_blank"
          class="glass flex items-center justify-center gap-3 rounded-2xl py-3 font-medium shadow-lg border border-white/10 hover:scale-[1.03] transition">
@@ -81,31 +103,31 @@
   </section>
 
   <!-- PRODUK -->
-  <section class="py-14 px-6 bg-black/30 backdrop-blur-xl border-t border-white/10">
+  <section class="py-14 px-6 bg-black/30 backdrop-blur-xl border-t border-white/10 reveal">
     <h2 class="text-2xl font-semibold text-center mb-10 text-amber-400">
       Produk Tana Swari
     </h2>
 
     <div class="grid grid-cols-2 md:grid-cols-3 gap-5 max-w-5xl mx-auto text-sm">
 
-      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Gender</div>
-      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Tawa-tawa</div>
-      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Reong</div>
-      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Ceng-ceng</div>
-      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Gong</div>
-      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Kempur</div>
-      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Bende</div>
-      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Klenang</div>
-      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Gangsa</div>
-      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Kemong Gantung / Klentong</div>
-      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Kajar / Kempli</div>
-      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/20 transition">Instrumen Lainnya</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/30 hover:border-amber-400/40 border border-white/10 transition">Gender</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/30 hover:border-amber-400/40 border border-white/10 transition">Tawa-tawa</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/30 hover:border-amber-400/40 border border-white/10 transition">Reong</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/30 hover:border-amber-400/40 border border-white/10 transition">Ceng-ceng</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/30 hover:border-amber-400/40 border border-white/10 transition">Gong</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/30 hover:border-amber-400/40 border border-white/10 transition">Kempur</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/30 hover:border-amber-400/40 border border-white/10 transition">Bende</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/30 hover:border-amber-400/40 border border-white/10 transition">Klenang</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/30 hover:border-amber-400/40 border border-white/10 transition">Gangsa</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/30 hover:border-amber-400/40 border border-white/10 transition">Kemong Gantung / Klentong</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/30 hover:border-amber-400/40 border border-white/10 transition">Kajar / Kempli</div>
+      <div class="glass rounded-2xl p-4 shadow-lg hover:-translate-y-1 hover:shadow-amber-500/30 hover:border-amber-400/40 border border-white/10 transition">Instrumen Lainnya</div>
 
     </div>
   </section>
 
   <!-- CUSTOM -->
-  <section class="py-14 px-6 text-center">
+  <section class="py-14 px-6 text-center reveal">
     <h2 class="text-xl font-semibold mb-4 text-amber-400">
       Pesanan & Kelengkapan Tambahan
     </h2>
@@ -124,13 +146,26 @@
   </section>
 
   <!-- FOOTER -->
-  <section class="text-center text-sm text-amber-200/70 py-8 border-t border-white/10">
-    Serius ingin membeli, tukar tambah, atau service gamelan? Hubungi kami sekarang.
-  </section>
-
-  <footer class="text-center text-amber-200/40 text-xs pb-6">
+  <footer class="text-center text-amber-200/40 text-xs py-6 border-t border-white/10">
     © 2026 Tana Swari
   </footer>
+
+  <!-- SCRIPT REVEAL ON SCROLL -->
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+      const trigger = window.innerHeight * 0.9;
+
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < trigger) el.classList.add("show");
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+  </script>
 
 </body>
 </html>
